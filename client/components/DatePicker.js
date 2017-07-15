@@ -25,7 +25,7 @@ export default class Example extends React.Component {
   render() {
     return <DatePicker
         selected={this.state.startDate}
-        onChange={value => field.input.onChange(value)}
+        onChange={this.handleChange}
     />;
   }
 }

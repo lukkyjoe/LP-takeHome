@@ -58,7 +58,7 @@ const renderField = ({
 
 const renderDatePicker = ({input, placeholder, defaultValue, meta: {touched, error} }) => (
   <div>
-        <DatePicker {...input} dateForm="MM/DD/YYYY" selected={input.value ? moment(input.value) : null} />
+        <DatePicker {...input} dateForm="MM/DD/YYYY" selected={input.value ? moment(input.value) : null} autoOk={true} onChange={(event, value) => input.onChange(value)} />
         {touched && error && <span>{error}</span>}
   </div>
 );
@@ -75,7 +75,7 @@ const SyncValidationForm = props => {
       />
       <Field name="email" type="email" component={renderField} label="Email" />
       <Field name="age" type="number" component={renderField} label="Age" />
-      <Field name="date" type="foo" component={renderDatePicker} />
+      <Field name="date" type="date" component={renderDatePicker} />
       <div>
         <button type="submit" disabled={submitting}>
           Submit

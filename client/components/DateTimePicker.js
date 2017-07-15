@@ -1,6 +1,9 @@
-import React from 'react';
-import {DateTimePicker} from 'react-widgets';
-import moment from 'moment';
-import {momentLocaliser} from 'moment';
+// import React from 'react';
+// import DateTimePicker from 'react-widgets/lib/DateTimePicker'
+// import moment from 'moment'
+// import momentLocaliser from 'react-widgets/lib/localizers/moment'
 
-momentLocaliser(moment)
+// import 'react-widgets/dist/css/react-widgets.css'
+
+// momentLocaliser(moment)
+

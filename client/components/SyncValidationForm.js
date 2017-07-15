@@ -1,6 +1,14 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import DatePicker from './DatePicker';
+import DateTimePicker from 'react-widgets/lib/DateTimePicker'
+import moment from 'moment'
+import momentLocaliser from 'react-widgets/lib/localizers/moment'
+
+import 'react-widgets/dist/css/react-widgets.css'
+
+momentLocaliser(moment)
+
 
 const validate = values => {
   const errors = {}
@@ -63,6 +71,14 @@ const renderDatePicker = ({input, placeholder, defaultValue, meta: {touched, err
   </div>
 );
 
+const renderDateTimePicker = ({ input: { onChange, value }, showTime }) =>
+  <DateTimePicker
+    onChange={onChange}
+    format="DD MMM YYYY"
+    time={showTime}
+    value={!value ? null : new Date(value)}
+  />
+
 const SyncValidationForm = props => {
   const { handleSubmit, pristine, reset, submitting } = props
   return (
@@ -75,7 +91,7 @@ const SyncValidationForm = props => {
       />
       <Field name="email" type="email" component={renderField} label="Email" />
       <Field name="age" type="number" component={renderField} label="Age" />
-      <Field name="date" type="date" component={renderDatePicker} />
+      <Field name="dob" showTime={false} component={renderDateTimePicker} />
       <div>
         <button type="submit" disabled={submitting}>
           Submit

@@ -17,8 +17,10 @@
   },
   "dependencies": {
     "html-webpack-plugin": "^2.29.0",
+    "moment": "^2.18.1",
     "path": "^0.12.7",
     "react": "^15.6.1",
+    "react-datepicker": "^0.51.0",
     "react-dom": "^15.6.1",
     "redux-form": "^7.0.0",
     "redux-form-website-template": "^0.0.45",

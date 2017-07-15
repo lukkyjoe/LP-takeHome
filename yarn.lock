@@ -553,6 +553,14 @@ babel-plugin-transform-strict-mode@^6.24.1:
     babel-runtime "^6.22.0"
     babel-types "^6.24.1"
 
+babel-polyfill@^6.7.4:
+  version "6.23.0"
+  resolved "https://registry.yarnpkg.com/babel-polyfill/-/babel-polyfill-6.23.0.tgz#8364ca62df8eafb830499f699177466c3b03499d"
+  dependencies:
+    babel-runtime "^6.22.0"
+    core-js "^2.4.0"
+    regenerator-runtime "^0.10.0"
+
 babel-preset-es2015@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-preset-es2015/-/babel-preset-es2015-6.24.1.tgz#d44050d6bc2c9feea702aaf38d727a0210538939"
@@ -883,6 +891,10 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
+classnames@^2.2.3:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
+
 clean-css@4.1.x:
   version "4.1.6"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.1.6.tgz#5a47beb526994cb4f7bf36188a55ed3b45528f0b"
@@ -1028,7 +1040,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-react-class@^15.6.0:
+create-react-class@^15.5.3, create-react-class@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.0.tgz#ab448497c26566e1e29413e883207d57cfe7bed4"
   dependencies:
@@ -1296,6 +1308,10 @@ es5-ext@^0.10.14, es5-ext@^0.10.9, es5-ext@~0.10.14:
   dependencies:
     es6-iterator "2"
     es6-symbol "~3.1"
+
+es6-error@^4.0.0:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/es6-error/-/es6-error-4.0.2.tgz#eec5c726eacef51b7f6b73c20db6e1b13b069c98"
 
 es6-iterator@2, es6-iterator@^2.0.1, es6-iterator@~2.0.1:
   version "2.0.1"
@@ -1737,6 +1753,14 @@ hoek@2.x.x:
   version "2.16.3"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
 
+hoist-non-react-statics@^1.0.3, hoist-non-react-statics@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
+
+hoist-non-react-statics@^2.0.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.2.0.tgz#b099ca82f3640b1244309c8a526a2bd60ad9d7d9"
+
 home-or-tmp@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/home-or-tmp/-/home-or-tmp-2.0.0.tgz#e36c3f2d2cae7d746a857e38d18d5f32a7882db8"
@@ -1882,7 +1906,7 @@ interpret@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.3.tgz#cbc35c62eeee73f19ab7b10a801511401afc0f90"
 
-invariant@^2.2.0:
+invariant@^2.0.0, invariant@^2.2.0, invariant@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
   dependencies:
@@ -2001,6 +2025,10 @@ is-posix-bracket@^0.1.0:
 is-primitive@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/is-primitive/-/is-primitive-2.0.0.tgz#207bab91638499c07b2adf240a41a87210034575"
+
+is-promise@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/is-promise/-/is-promise-2.1.0.tgz#79a2a9ece7f096e80f36d2b2f3bc16c1ff4bf3fa"
 
 is-stream@^1.0.1:
   version "1.1.0"
@@ -2158,7 +2186,11 @@ locate-path@^2.0.0:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
 
-lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.2.0:
+lodash-es@^4.17.3, lodash-es@^4.2.0, lodash-es@^4.2.1:
+  version "4.17.4"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.4.tgz#dcc1d7552e150a0640073ba9cb31d70f032950e7"
+
+lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.2.0, lodash@^4.2.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -2192,6 +2224,10 @@ make-dir@^1.0.0:
 map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
+
+marked@^0.3.5:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -2673,7 +2709,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10:
+prop-types@^15.5.10, prop-types@^15.5.9:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
@@ -2764,6 +2800,18 @@ react-dom@^15.6.1:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
+react-redux@^5.0.5:
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.5.tgz#f8e8c7b239422576e52d6b7db06439469be9846a"
+  dependencies:
+    create-react-class "^15.5.3"
+    hoist-non-react-statics "^1.0.3"
+    invariant "^2.0.0"
+    lodash "^4.2.0"
+    lodash-es "^4.2.0"
+    loose-envify "^1.1.0"
+    prop-types "^15.5.10"
+
 react@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
@@ -2825,6 +2873,55 @@ redent@^1.0.0:
   dependencies:
     indent-string "^2.1.0"
     strip-indent "^1.0.1"
+
+redux-form-website-template@^0.0.45:
+  version "0.0.45"
+  resolved "https://registry.yarnpkg.com/redux-form-website-template/-/redux-form-website-template-0.0.45.tgz#7af78859594af836cbf869ce64f0bbc3f0346aca"
+  dependencies:
+    babel-polyfill "^6.7.4"
+    classnames "^2.2.3"
+    marked "^0.3.5"
+    prop-types "^15.5.10"
+    react "^15.6.1"
+    react-dom "^15.6.1"
+    react-redux "^5.0.5"
+    redux "^3.4.0"
+    redux-form "^6.8.0"
+
+redux-form@^6.8.0:
+  version "6.8.0"
+  resolved "https://registry.yarnpkg.com/redux-form/-/redux-form-6.8.0.tgz#ff1b590b59f987d7e3ff080d752f7120bfe42af3"
+  dependencies:
+    deep-equal "^1.0.1"
+    es6-error "^4.0.0"
+    hoist-non-react-statics "^1.2.0"
+    invariant "^2.2.2"
+    is-promise "^2.1.0"
+    lodash "^4.17.3"
+    lodash-es "^4.17.3"
+    prop-types "^15.5.9"
+
+redux-form@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/redux-form/-/redux-form-7.0.0.tgz#6ef9eb72c1df1ee676139d74b5e7503f9ce0f0cb"
+  dependencies:
+    deep-equal "^1.0.1"
+    es6-error "^4.0.0"
+    hoist-non-react-statics "^2.0.0"
+    invariant "^2.2.2"
+    is-promise "^2.1.0"
+    lodash "^4.17.3"
+    lodash-es "^4.17.3"
+    prop-types "^15.5.9"
+
+redux@^3.4.0:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
+  dependencies:
+    lodash "^4.2.1"
+    lodash-es "^4.2.1"
+    loose-envify "^1.1.0"
+    symbol-observable "^1.0.3"
 
 regenerate@^1.2.1:
   version "1.3.2"
@@ -3207,6 +3304,10 @@ supports-color@^3.1.0, supports-color@^3.1.1:
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-3.2.3.tgz#65ac0504b3954171d8a64946b2ae3cbb8a5f54f6"
   dependencies:
     has-flag "^1.0.0"
+
+symbol-observable@^1.0.3:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
 
 tapable@^0.2.5, tapable@~0.2.5:
   version "0.2.6"

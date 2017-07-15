@@ -1,20 +1,21 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-// Defining schema for our Todo API
-var TodoSchema = Schema({
-  todo: {
+// Defining schema for our Event API
+var EventSchema = Schema({
+  firstName: {
     type: String
   },
-  completed: {
-    type: Boolean,
-    default: false
+  lastName: {
+    type: String,
   },
-  created_by: {
+  email: {
+    type: String,
+  },
+  date: {
     type: Date,
-    default: Date.now
   }
 });
 //Exporting our model
-var TodoModel = mongoose.model('Todo', TodoSchema);
+var EventModel = mongoose.model('Event', EventSchema);
 
-module.exports = TodoModel;
+module.exports = EventModel;

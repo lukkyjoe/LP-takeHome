@@ -55,6 +55,13 @@ const renderField = ({
     </div>
   </div>
 
+const renderDatePicker = ({input, placeholder, defaultValue, meta: {touched, error} }) => (
+  <div>
+        <DatePicker {...input} dateForm="MM/DD/YYYY" selected={input.value ? moment(input.value) : null} />
+        {touched && error && <span>{error}</span>}
+  </div>
+);
+
 const SyncValidationForm = props => {
   const { handleSubmit, pristine, reset, submitting } = props
   return (

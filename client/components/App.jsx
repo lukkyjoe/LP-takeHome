@@ -5,6 +5,7 @@ import { Values } from 'redux-form-website-template';
 import store from './store';
 import showResults from './showResults';
 import SyncValidationForm from './SyncValidationForm';
+import DatePicker from './DatePicker';
 
 export default class App extends React.Component {
   render() {
@@ -13,6 +14,7 @@ export default class App extends React.Component {
         <div style={{ padding: 15 }}>
           <h2>Synchronous Validation</h2>
           <SyncValidationForm onSubmit={showResults} />
+          <DatePicker />
           <Values form="syncValidation" />
         </div>
       </Provider>

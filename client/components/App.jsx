@@ -12,10 +12,9 @@ export default class App extends React.Component {
     return (
       <Provider store={store}>
         <div style={{ padding: 15 }}>
-          <h2>Synchronous Validation</h2>
+          <h2>Application for event</h2>
           <SyncValidationForm onSubmit={showResults} />
-          <DatePicker />
-          <Values form="syncValidation" />
+
         </div>
       </Provider>
     );

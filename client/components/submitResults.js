@@ -1,9 +1,15 @@
-// const save = require('../saveToDB/save');
-
 const submitResults = values => {
 
+console.dir(values);
 new Promise((resolve, reject) => {
-      fetch("/api/", {method: "post", body: JSON.stringify(values)})
+      fetch("/api/", {
+          method: "post", 
+          body: JSON.stringify(values),
+          headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'}
+        }
+      )
         .then(res => res.json())
         .then(res => {
           if (res.hasOwnProperty("errors")) {

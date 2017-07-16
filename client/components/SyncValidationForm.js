@@ -91,7 +91,7 @@ const SyncValidationForm = props => {
       />
       <Field name="email" type="email" component={renderField} label="Email" />
       <Field name="age" type="number" component={renderField} label="Age" />
-      <Field name="dob" showTime={false} component={renderDateTimePicker} />
+      <Field name="date" showTime={false} component={renderDateTimePicker} />
       <div>
         <button type="submit" disabled={submitting}>
           Submit

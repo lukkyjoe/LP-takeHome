@@ -83,7 +83,6 @@ const SyncValidationForm = props => {
         component={renderField}
         label="First Name"
       />
-    <form onSubmit={handleSubmit}>
       <Field
         name="lastName"
         type="text"

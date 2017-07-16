@@ -14,6 +14,8 @@ app.use(bodyParser.json());                                     // parse applica
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(methodOverride());
 app.use('/api', router);
+app.use(express.static('dist'));
+
 
 router.get('/hello', function(request, response) {
   response.json({message: 'the router is working'})

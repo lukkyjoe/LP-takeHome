@@ -3,6 +3,16 @@
 export default function submitResults(values) {
   console.dir(values);
 
-  // save(values);
+  return new Promise((resolve, reject) => {
+      fetch("/api/items", {method: "post", body: JSON.stringify(values)})
+        .then(res => res.json())
+        .then(res => {
+          if (res.hasOwnProperty("errors")) {
+            reject(res.errors)
+          } else {
+            resolve(res.data)
+          }
+        })
+    })
 
 }

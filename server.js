@@ -5,11 +5,8 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const app = express();
 const config = require('./client/config/config');
-const router = express.Router();  
-
-router.get('/hello', function(request, response) {
-  response.json({message: 'the router is working'})
-})
+const router = express.Router(); 
+let Event = require('.client/model/event.model');
 
 app.use(morgan('dev'));                                         // log every request to the console
 app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
@@ -17,6 +14,21 @@ app.use(bodyParser.json());                                     // parse applica
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(methodOverride());
 app.use('/api', router);
+
+router.get('/hello', function(request, response) {
+  response.json({message: 'the router is working'})
+})
+
+router.post('/', function (request, response) {
+  let event = new Event({firstName: 'Bob'});
+  event.save(function(err) {
+    if (err) {
+      response.send(err);
+    }
+    response.json({message: 'Event created'});
+  })
+  response.send(('hiii'));
+})
 
 //Connecting MongoDB using mongoose to our application
 mongoose.connect(config.db);

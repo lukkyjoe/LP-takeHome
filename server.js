@@ -20,6 +20,7 @@ router.get('/hello', function(request, response) {
 })
 
 router.post('/', function (request, response) {
+  console.log('what did you get?', request);
   let event = new Event({firstName: 'Bob', lastName: 'Dylan', email: 'bob.dylan@dobbylan.com', date: Date()});
   event.save(function(err) {
     if (err) {

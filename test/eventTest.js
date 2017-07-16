@@ -14,4 +14,28 @@ describe('event', function() {
             done();
         });
     });
+    it('should be invalid if last name is empty', function(done) {
+        var event = new Event();
+ 
+        event.validate(function(err) {
+            expect(err.errors.lastName).to.exist;
+            done();
+        });
+    });
+    it('should be invalid if email is empty', function(done) {
+        var event = new Event();
+ 
+        event.validate(function(err) {
+            expect(err.errors.email).to.exist;
+            done();
+        });
+    });
+    it('should be invalid if date is empty', function(done) {
+        var event = new Event();
+ 
+        event.validate(function(err) {
+            expect(err.errors.date).to.exist;
+            done();
+        });
+    });
 });

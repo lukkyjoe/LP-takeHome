@@ -1,7 +1,6 @@
 // const save = require('../saveToDB/save');
 
 const submitResults = values => {
-  console.dir(values);
 
 new Promise((resolve, reject) => {
       fetch("/api/", {method: "post", body: JSON.stringify(values)})

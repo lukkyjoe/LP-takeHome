@@ -1,8 +1,8 @@
-//import mongoose save methods
+const Save = require('../saveToDB/save');
 
 export default function submitResults(values) {
   console.dir(values);
 
-  // save into mongoDB
+  Save.saveToDB(values);
 
 }

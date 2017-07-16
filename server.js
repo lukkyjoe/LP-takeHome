@@ -6,7 +6,7 @@ const methodOverride = require('method-override');
 const app = express();
 const config = require('./client/config/config');
 const router = express.Router(); 
-let Event = require('.client/model/event.model');
+let Event = require('./client/model/event.model');
 
 app.use(morgan('dev'));                                         // log every request to the console
 app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
@@ -25,9 +25,8 @@ router.post('/', function (request, response) {
     if (err) {
       response.send(err);
     }
-    response.json({message: 'Event created'});
+    // response.json({message: 'Event created'});
   })
-  response.send(('hiii'));
 })
 
 //Connecting MongoDB using mongoose to our application

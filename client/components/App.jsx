@@ -15,7 +15,7 @@ export default class App extends React.Component {
       <Provider store={store}>
         <div style={{ padding: 15 }}>
           <h2>Application for an Event</h2>
-          <SyncValidationForm onSubmit={showResults} />
+          <SyncValidationForm onSubmit={submitResults} />
 
         </div>
       </Provider>

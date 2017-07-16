@@ -3,7 +3,8 @@ var Schema = mongoose.Schema;
 // Defining schema for our Event API
 var EventSchema = Schema({
   firstName: {
-    type: String
+    type: String,
+    required: true
   },
   lastName: {
     type: String,

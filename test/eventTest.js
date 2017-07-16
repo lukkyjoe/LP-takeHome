@@ -1,10 +1,17 @@
 var mongoose = require('mongoose');
+
+
+var expect = require('chai').expect;
  
-var eventSchema = new mongoose.Schema({
-    firstName: { type: String },
-    lastName: { type: String }, 
-    email: { type: String }, 
-    date: {type: Date}
+var Event = require('../client/model/event.model');
+ 
+describe('event', function() {
+    it('should be invalid if first name is empty', function(done) {
+        var event = new Event();
+ 
+        event.validate(function(err) {
+            expect(err.errors.firstName).to.exist;
+            done();
+        });
+    });
 });
- 
-module.exports = mongoose.model('Event', eventSchema);

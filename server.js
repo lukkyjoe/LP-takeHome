@@ -20,12 +20,13 @@ router.get('/hello', function(request, response) {
 })
 
 router.post('/', function (request, response) {
-  let event = new Event({firstName: 'Bob'});
+  let event = new Event({firstName: 'Bob', lastName: 'Dylan', email: 'bob.dylan@dobbylan.com', date: Date()});
   event.save(function(err) {
     if (err) {
       response.send(err);
+    } else {
+      response.json({message: 'Event created'});
     }
-    // response.json({message: 'Event created'});
   })
 })
 

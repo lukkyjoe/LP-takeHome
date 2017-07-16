@@ -7,11 +7,16 @@ const app = express();
 const config = require('./client/config/config');
 const router = express.Router();  
 
+router.get('/hello', function(request, response) {
+  response.json({message: 'the router is working'})
+})
+
 app.use(morgan('dev'));                                         // log every request to the console
 app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
 app.use(bodyParser.json());                                     // parse application/json
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(methodOverride());
+app.use('/api', router);
 
 //Connecting MongoDB using mongoose to our application
 mongoose.connect(config.db);

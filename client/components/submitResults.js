@@ -1,10 +1,9 @@
 // const save = require('../saveToDB/save');
 
-export default function submitResults(values) {
+const submitResults = values => {
   console.dir(values);
 
-  // return 'testing the request.body'
-  return new Promise((resolve, reject) => {
+new Promise((resolve, reject) => {
       fetch("/api/", {method: "post", body: JSON.stringify(values)})
         .then(res => res.json())
         .then(res => {
@@ -15,5 +14,16 @@ export default function submitResults(values) {
           }
         })
     })
-
 }
+
+// const showResults = values =>
+//   new Promise(resolve => {
+//     setTimeout(() => {
+//       // simulate server latency
+//       console.log('helloo');
+//       window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`)
+//       resolve()
+//     }, 500)
+//   })
+
+export default submitResults;

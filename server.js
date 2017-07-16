@@ -28,6 +28,7 @@ router.post('/', function (request, response) {
     if (err) {
       response.send(err);
     } else {
+      console.log('saved?');
       response.json({message: 'Event created'});
     }
   })

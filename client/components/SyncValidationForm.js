@@ -112,12 +112,12 @@ const SyncValidationForm = props => {
         floatingLabelText="Date"
       />
       <div>
-        <button type="submit" disabled={pristine || submitting}>
+        <RaisedButton type="submit" disabled={pristine || submitting}>
           Submit
-        </button>
-        <button type="button" disabled={pristine || submitting} onClick={reset}>
+        </RaisedButton>
+        <RaisedButton type="button" disabled={pristine || submitting} onClick={reset}>
           Clear Values
-        </button>
+        </RaisedButton>
       </div>
     </form>
   )

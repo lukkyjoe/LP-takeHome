@@ -95,7 +95,7 @@ const SyncValidationForm = props => {
         label="Last Name"
       />
       <Field name="email" type="email" component={renderField} label="Email" />
-      <Field name="date" showTime={false} component={renderDateTimePicker} />
+
       <Field
         name="when"
         component={DatePicker}

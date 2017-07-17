@@ -115,9 +115,6 @@ const SyncValidationForm = props => {
         <RaisedButton type="submit" disabled={pristine || submitting}>
           Submit
         </RaisedButton>
-        <RaisedButton type="button" disabled={pristine || submitting} onClick={reset}>
-          Clear Values
-        </RaisedButton>
       </div>
     </form>
   )

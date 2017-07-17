@@ -1,9 +1,6 @@
-var mongoose = require('mongoose');
-
-
-var expect = require('chai').expect;
- 
-var Event = require('../client/model/event.model');
+const mongoose = require('mongoose');
+const expect = require('chai').expect;
+const Event = require('../client/model/event.model');
  
 describe('event', function() {
     it('should be invalid if first name is empty', function(done) {

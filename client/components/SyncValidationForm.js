@@ -91,16 +91,14 @@ const SyncValidationForm = props => {
       <Field
         name="lastName"
         type="text"
-        component={renderField}
+        component={TextField}
         label="Last Name"
       />
-      <Field name="email" type="email" component={renderField} label="Email" />
-
+      <Field name="email" type="email" component={TextField} label="Email" />
       <Field
-        name="when"
+        name="date"
         component={DatePicker}
         format={null}
-        hintText="Day of delivery?"
         validate={required}
       />
       <div>

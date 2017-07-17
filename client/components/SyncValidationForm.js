@@ -86,6 +86,7 @@ const SyncValidationForm = props => {
         name="firstName"
         type="text"
         component={TextField}
+        floatingLabelText="First Name"
         label="First Name"
       />
       <Field
@@ -93,13 +94,21 @@ const SyncValidationForm = props => {
         type="text"
         component={TextField}
         label="Last Name"
+        floatingLabelText="Last Name"
       />
-      <Field name="email" type="email" component={TextField} label="Email" />
+      <Field 
+        name="email" 
+        type="email" 
+        component={TextField} 
+        label="Email" 
+        floatingLabelText="Email"
+      />
       <Field
         name="date"
         component={DatePicker}
         format={null}
         validate={required}
+        floatingLabelText="Date"
       />
       <div>
         <button type="submit" disabled={pristine || submitting}>

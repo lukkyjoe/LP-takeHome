@@ -22,7 +22,7 @@ const validate = values => {
     errors.firstName = 'Required'
   }
   if (!values.lastName) {
-    errors.firstName = 'Required'
+    errors.lastName = 'Required'
   }
   if (!values.email) {
     errors.email = 'Required'
@@ -34,9 +34,6 @@ const validate = values => {
 
 const warn = values => {
   const warnings = {}
-  if (values.age < 19) {
-    warnings.age = 'Hmm, you seem a bit young...'
-  }
   return warnings
 }
 

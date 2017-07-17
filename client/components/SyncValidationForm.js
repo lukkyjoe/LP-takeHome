@@ -7,6 +7,8 @@ import momentLocaliser from 'react-widgets/lib/localizers/moment'
 
 import 'react-widgets/dist/css/react-widgets.css'
 
+import { TextField, TimePicker } from 'redux-form-material-ui';
+
 momentLocaliser(moment)
 
 
@@ -80,7 +82,7 @@ const SyncValidationForm = props => {
       <Field
         name="firstName"
         type="text"
-        component={renderField}
+        component={TextField}
         label="First Name"
       />
       <Field

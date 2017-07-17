@@ -1,16 +1,19 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import DatePicker from './DatePicker';
+// import DatePicker from './DatePicker';
 import DateTimePicker from 'react-widgets/lib/DateTimePicker'
 import moment from 'moment'
 import momentLocaliser from 'react-widgets/lib/localizers/moment'
 
 import 'react-widgets/dist/css/react-widgets.css'
 
-import { TextField, TimePicker } from 'redux-form-material-ui';
+import { TextField, DatePicker } from 'redux-form-material-ui';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
 
 momentLocaliser(moment)
 
+const required = value => (value == null ? 'Required' : undefined)
 
 const validate = values => {
   const errors = {}
@@ -93,6 +96,13 @@ const SyncValidationForm = props => {
       />
       <Field name="email" type="email" component={renderField} label="Email" />
       <Field name="date" showTime={false} component={renderDateTimePicker} />
+      <Field
+        name="when"
+        component={DatePicker}
+        format={null}
+        hintText="Day of delivery?"
+        validate={required}
+      />
       <div>
         <button type="submit" disabled={pristine || submitting}>
           Submit

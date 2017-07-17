@@ -12,3 +12,9 @@ module.exports.saveToDB = function(obj) {
     else {console.log(event)}
   })
 }
+
+module.exports.deleteFromDB = function(obj) {
+  Event.find({firstName: obj.firstName, lastName: obj.lastName, email: obj.email, date: obj.date})
+  .remove({})
+  .exec()
+}

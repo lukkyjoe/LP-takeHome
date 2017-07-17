@@ -9,6 +9,7 @@ import 'react-widgets/dist/css/react-widgets.css'
 
 import { TextField, DatePicker } from 'redux-form-material-ui';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import RaisedButton from 'material-ui/RaisedButton'
 injectTapEventPlugin();
 
 momentLocaliser(moment)
@@ -81,7 +82,7 @@ const renderDateTimePicker = ({ input: { onChange, value }, showTime }) =>
 const SyncValidationForm = props => {
   const { handleSubmit, pristine, reset, submitting } = props
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column'}}>
       <Field
         name="firstName"
         type="text"

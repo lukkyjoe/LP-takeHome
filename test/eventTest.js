@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const expect = require('chai').expect;
 const Event = require('../client/model/event.model');
  
-describe('event', function() {
+describe('event form validation on server side', function() {
     it('should be invalid if first name is empty', function(done) {
         var event = new Event();
  

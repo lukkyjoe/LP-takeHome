@@ -4,7 +4,7 @@ var sinon = require('sinon');
 var save = require('../client/saveToDB/save');
 var Event = require('../client/model/event.model');
 
-describe('save', function() {
+describe('save with stub', function() {
 	beforeEach(function() {
 		sinon.stub(Event, 'find');
   });

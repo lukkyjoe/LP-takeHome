@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const expect = require('chai').expect;
+const config = require('../client/config/config');
 
 const testSchema = mongoose.Schema({
   firstName: {
@@ -26,7 +27,7 @@ describe('Database Tests', function() {
   //Before starting the test, create a sandboxed database connection
   //Once a connection is established invoke done()
   before(function (done) {
-    mongoose.connect('mongodb://localhost/testDatabase');
+    mongoose.connect(config.test_db);
     const db = mongoose.connection;
     db.on('error', console.error.bind(console, 'connection error'));
     db.once('open', function() {
@@ -70,10 +71,10 @@ describe('Database Tests', function() {
   });
 
   //After all tests are finished drop database and close connection
-  // after(function(done){
-  //   mongoose.connection.db.dropDatabase(function(){
-  //     mongoose.connection.close(done);
-  //   });
-  // });
+  after(function(done){
+    mongoose.connection.db.dropDatabase(function(){
+      mongoose.connection.close(done);
+    });
+  });
 
 })

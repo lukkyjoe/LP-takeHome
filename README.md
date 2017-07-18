@@ -15,5 +15,9 @@ have mongodb installed
 cd into directory
 npm install
 
+## Run the app
+npm start
+The default setting is that it's running on localhost on port 2000. See config.js for details.
+
 ## Running the tests
 npm test

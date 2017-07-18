@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const expect = require('chai').expect;
 
-const testSchema = new Schema({
+const testSchema = mongoose.Schema({
   firstName: {
     type: String,
     required: true
@@ -42,7 +42,7 @@ describe('Database Tests', function() {
         firstName: 'Piotr',
         lastName: 'Kowalski',
         email: 'test@test.com',
-        date: ISODate("2017-07-17T16:08:41.703Z")
+        date: Date()
       });
       testName.save(done);
     });
@@ -60,8 +60,8 @@ describe('Database Tests', function() {
     });
 
     it('Should retrieve data from test database', function(done) {
-      //Look up the 'Mike' object previously saved.
-      TestEvent.find({firstName: 'Piotr'}, (err, name) => {
+      //Look up the object previously saved.
+      TestEvent.find({firstName: 'Piotr'}, (err, firstName) => {
         if(err) {throw err;}
         if(firstName.length === 0) {throw new Error('No data.');}
         done();
@@ -70,10 +70,10 @@ describe('Database Tests', function() {
   });
 
   //After all tests are finished drop database and close connection
-  after(function(done){
-    mongoose.connection.db.dropDatabase(function(){
-      mongoose.connection.close(done);
-    });
-  });
+  // after(function(done){
+  //   mongoose.connection.db.dropDatabase(function(){
+  //     mongoose.connection.close(done);
+  //   });
+  // });
 
 })

@@ -58,6 +58,15 @@ describe('Database Tests', function() {
         throw new Error('Should generate error!');
       });
     });
+
+    it('Should retrieve data from test database', function(done) {
+      //Look up the 'Mike' object previously saved.
+      TestEvent.find({firstName: 'Piotr'}, (err, name) => {
+        if(err) {throw err;}
+        if(firstName.length === 0) {throw new Error('No data.');}
+        done();
+      });
+    });
   });
 
   //After all tests are finished drop database and close connection
